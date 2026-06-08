@@ -4,29 +4,60 @@
 
 // BEGIN_DEFAULT_DATA
 const DEFAULT_DATA = {
-  hero: {
-    navLogo: 'EK',
-    name: 'Eero Klen',
-    title: 'Designer & Developer',
-    description: 'Rakennan selkeitä digitaalisia tuotteita, joissa muoto ja toiminto kohtaavat.',
-    footerCopyright: '© 2026 Eero Klen',
-    footerSub: 'Rakennettu käsin HTML, CSS & JS'
+  "hero": {
+    "navLogo": "EK",
+    "name": "Eero Klen",
+    "title": "Designer & Developer",
+    "description": "Rakennan selkeitä digitaalisia tuotteita, joissa muoto ja toiminto kohtaavat.",
+    "footerCopyright": "© 2026 Eero Klen",
+    "footerSub": "Rakennettu käsin HTML, CSS & JS"
   },
-  projects: [
+  "projects": [
     {
-      id: '1', type: 'Web App', title: 'Projektin nimi',
-      description: 'Lyhyt kuvaus projektista. Mitä se tekee, miksi se on kiinnostava.',
-      tags: ['React', 'Node.js'], url: '#', detailContent: '', media: []
+      "id": "1",
+      "type": "Web App",
+      "title": "Projektin nimi",
+      "description": "Lyhyt kuvaus projektista. Mitä se tekee, miksi se on kiinnostava.",
+      "tags": [
+        "React",
+        "Node.js"
+      ],
+      "url": "#",
+      "detailContent": "",
+      "media": [
+        {
+          "id": 1780943410760.7878,
+          "type": "image",
+          "src": "images/IMG_6887.HEIC",
+          "caption": ""
+        }
+      ]
     },
     {
-      id: '2', type: 'Design', title: 'Toinen projekti',
-      description: 'Lyhyt kuvaus projektista.',
-      tags: ['Figma', 'Branding'], url: '#', detailContent: '', media: []
+      "id": "2",
+      "type": "Design",
+      "title": "Toinen projekti",
+      "description": "Lyhyt kuvaus projektista.",
+      "tags": [
+        "Figma",
+        "Branding"
+      ],
+      "url": "#",
+      "detailContent": "",
+      "media": []
     },
     {
-      id: '3', type: 'Open Source', title: 'Kolmas projekti',
-      description: 'Lyhyt kuvaus projektista.',
-      tags: ['Python', 'CLI'], url: '#', detailContent: '', media: []
+      "id": "3",
+      "type": "Open Source",
+      "title": "Kolmas projekti",
+      "description": "Lyhyt kuvaus projektista.",
+      "tags": [
+        "Python",
+        "CLI"
+      ],
+      "url": "#",
+      "detailContent": "",
+      "media": []
     }
   ]
 };
