@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Eero Klen</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-start">
+      <span class="nav-logo" data-e="navLogo">EK</span>
+      <button id="backBtn" class="back-btn">← Takaisin</button>
+    </div>
+    <div class="nav-actions">
+      <button id="exportBtn" class="export-btn" title="Lataa päivitetty script.js">↓ Exportoi</button>
+      <button id="editToggle" class="edit-toggle">Muokkaa</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Vaihda teema">
+        <span class="theme-icon">◐</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main view -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-name" data-e="name">Eero Klen</h1>
+      <p class="site-title" data-e="title">Designer &amp; Developer</p>
+      <p class="site-desc" data-e="description">Rakennan selkeitä digitaalisia tuotteita, joissa muoto ja toiminto kohtaavat.</p>
+    </div>
+  </header>
+
+  <main class="projects-section">
+    <div class="container">
+      <div class="section-label">Projektit</div>
+      <div class="work-grid" id="workGrid"></div>
+      <button id="addProject" class="add-project-btn">+ Lisää projekti</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p data-e="footerCopyright">© 2026 Eero Klen</p>
+      <p class="footer-sub" data-e="footerSub">Rakennettu käsin HTML, CSS &amp; JS</p>
+    </div>
+  </footer>
+
+  <!-- Detail view overlay -->
+  <div id="detailView" class="detail-view">
+    <div class="container detail-container">
+
+      <div class="detail-header">
+        <div class="detail-meta">
+          <span class="work-type" id="detailType"></span>
+          <a id="detailLink" class="work-link detail-link" target="_blank" rel="noopener" aria-label="Avaa projekti">↗</a>
+        </div>
+        <h1 class="detail-title" id="detailTitle"></h1>
+        <div class="detail-tags" id="detailTags"></div>
+      </div>
+
+      <div
+        class="detail-content"
+        id="detailContent"
+        data-placeholder="Kirjoita laajempi kuvaus projektista…"
+      ></div>
+
+      <div class="detail-media-grid" id="detailMedia"></div>
+
+      <div class="media-upload-zone" id="uploadZone">
+        <div class="url-row">
+          <input
+            type="text"
+            id="mediaUrlInput"
+            class="media-url-input"
+            placeholder="kuva.jpg tai https://… tai YouTube/Vimeo URL"
+          >
+          <button id="addMediaUrl" type="button" class="add-url-btn">Lisää</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
