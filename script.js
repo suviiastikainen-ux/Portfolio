@@ -106,6 +106,7 @@ function loadData() {
     (d.projects || []).forEach(p => {
       if (!p.detailContent) p.detailContent = '';
       if (!p.media) p.media = [];
+      if (!('thumbnailId' in p)) p.thumbnailId = null;
     });
     return d;
   } catch { return JSON.parse(JSON.stringify(DEFAULT_DATA)); }
@@ -233,7 +234,12 @@ function isVideoUrl(url) {
 // ============================================================
 
 function getProjectCoverSrc(project) {
-  const img = (project.media || []).find(m => m.type === 'image');
+  const media = project.media || [];
+  if (project.thumbnailId) {
+    const thumb = media.find(m => m.id === project.thumbnailId && m.type === 'image');
+    if (thumb) return thumb.src;
+  }
+  const img = media.find(m => m.type === 'image');
   return img ? img.src : null;
 }
 
@@ -441,6 +447,20 @@ function renderMedia(mediaItems) {
   const grid = document.getElementById('detailMedia');
   grid.innerHTML = '';
   mediaItems.forEach(item => grid.appendChild(createMediaItem(item)));
+  if (editMode) refreshThumbnailButtons();
+}
+
+function refreshThumbnailButtons() {
+  if (!currentProject) return;
+  document.querySelectorAll('#detailMedia .media-item').forEach(div => {
+    const id = Number(div.dataset.mediaId);
+    const btn = div.querySelector('.set-thumbnail-btn');
+    if (!btn) return;
+    const isActive = currentProject.thumbnailId === id ||
+      (!currentProject.thumbnailId && currentProject.media && currentProject.media.length > 0 && currentProject.media.find(m => m.type === 'image') && currentProject.media.find(m => m.type === 'image').id === id);
+    btn.classList.toggle('is-thumbnail', isActive);
+    btn.textContent = isActive ? '★ Thumbnail' : '☆ Aseta thumbnail';
+  });
 }
 
 function createMediaItem(item) {
@@ -461,8 +481,23 @@ function createMediaItem(item) {
     ${mediaHTML}
     <div class="media-footer">
       <p class="media-caption">${esc(item.caption || '')}</p>
-      <button class="media-delete" type="button" aria-label="Poista">×</button>
+      <div class="media-actions">
+        ${item.type === 'image' ? `<button class="set-thumbnail-btn" type="button">☆ Aseta thumbnail</button>` : ''}
+        <button class="media-delete" type="button" aria-label="Poista">×</button>
+      </div>
     </div>`;
+
+  // Thumbnail selection
+  const thumbBtn = div.querySelector('.set-thumbnail-btn');
+  if (thumbBtn) {
+    thumbBtn.addEventListener('click', () => {
+      if (!currentProject) return;
+      currentProject.thumbnailId = item.id;
+      persistToStorage();
+      updateCardCover(currentProject);
+      refreshThumbnailButtons();
+    });
+  }
 
   // Live-save caption to data
   const captionEl = div.querySelector('.media-caption');
@@ -586,6 +621,7 @@ function enableDetailEditing() {
   });
   document.querySelectorAll('#detailTags .tag.tag-sm').forEach(el => el.contentEditable = 'true');
   document.querySelectorAll('#detailMedia .media-caption').forEach(el => el.contentEditable = 'true');
+  refreshThumbnailButtons();
 }
 
 function disableDetailEditing() {
