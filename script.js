@@ -28,7 +28,7 @@ const DEFAULT_DATA = {
         {
           "id": 1780943957917.9695,
           "type": "image",
-          "src": "images/IMG_7691.jpg",
+          "src": "Images/IMG_7691.jpg",
           "caption": ""
         }
       ]
@@ -98,7 +98,7 @@ async function exportScript() {
       if (m.type === 'image' && m.src.startsWith('data:')) {
         const filename = m.filename || `image-${m.id}.jpg`;
         imageFiles.push({ filename, dataUrl: m.src });
-        m.src = `images/${filename}`;
+        m.src = `Images/${filename}`;
       }
     });
   });
@@ -114,7 +114,7 @@ async function exportScript() {
     if (cRes.ok) cssText = await cRes.text();
   } catch {}
 
-  // No images — download just script.js as before
+  // No Images — download just script.js as before
   if (imageFiles.length === 0) {
     if (scriptText) {
       downloadBlob('script.js', scriptText, 'application/javascript');
@@ -132,7 +132,7 @@ async function exportScript() {
   if (scriptText) zip.file('script.js', scriptText);
   if (htmlText)   zip.file('index.html', htmlText);
   if (cssText)    zip.file('style.css', cssText);
-  const imgFolder = zip.folder('images');
+  const imgFolder = zip.folder('Images');
   for (const { filename, dataUrl } of imageFiles) {
     imgFolder.file(filename, dataUrl.split(',')[1], { base64: true });
   }
@@ -459,9 +459,9 @@ function createMediaItem(item) {
 function addUrlToMedia(url) {
   url = url.trim();
   if (!url) return;
-  // Bare filename → images/ folder
+  // Bare filename → Images/ folder
   if (!/^(https?:\/\/|data:|\/|\.\/)/i.test(url) && !url.includes('/')) {
-    url = `images/${url}`;
+    url = `Images/${url}`;
   }
   const embedSrc = getEmbedUrl(url);
   let type = 'image', src = url;
