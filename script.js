@@ -44,7 +44,26 @@ const DEFAULT_DATA = {
       ],
       "url": "#",
       "detailContent": "",
-      "media": []
+      "media": [
+        {
+          "id": 1780983400829.9963,
+          "type": "image",
+          "src": "Images/IMG_6887.jpg",
+          "caption": ""
+        },
+        {
+          "id": 1780983437448.3713,
+          "type": "image",
+          "src": "Images/IMG_7691.jpg",
+          "caption": ""
+        },
+        {
+          "id": 1780983456965.498,
+          "type": "image",
+          "src": "Images/IMG_7693.jpg",
+          "caption": ""
+        }
+      ]
     },
     {
       "id": "3",
@@ -57,7 +76,20 @@ const DEFAULT_DATA = {
       ],
       "url": "#",
       "detailContent": "",
-      "media": []
+      "media": [
+        {
+          "id": 1780983515481.259,
+          "type": "video",
+          "src": "Images/Fazer Dumle Crispy Twins SOME 10sec 1920x1080.mp4",
+          "caption": ""
+        },
+        {
+          "id": 1780983543588.9485,
+          "type": "image",
+          "src": "Images/IMG_7050.jpg",
+          "caption": ""
+        }
+      ]
     }
   ]
 };
