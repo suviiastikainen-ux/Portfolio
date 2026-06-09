@@ -5,25 +5,22 @@
 // BEGIN_DEFAULT_DATA
 const DEFAULT_DATA = {
   "hero": {
-    "navLogo": "EK",
+    "navLogo": "suvii.astikainen@gmail.com",
     "name": "Eero Klen",
     "title": "Designer & Developer",
     "description": "Rakennan selkeitä digitaalisia tuotteita, joissa muoto ja toiminto kohtaavat.",
-    "footerCopyright": "© 2026 Eero Klen",
+    "footerCopyright": "© 2026 Suvi Astikainen",
     "footerSub": "Rakennettu käsin HTML, CSS & JS"
   },
   "projects": [
     {
       "id": "1",
-      "type": "Web App",
-      "title": "Projektin nimi",
+      "type": "",
+      "title": "L'Oréal Paris Campaign Launch",
       "description": "Lyhyt kuvaus projektista. Mitä se tekee, miksi se on kiinnostava.",
-      "tags": [
-        "React",
-        "Node.js"
-      ],
+      "tags": [],
       "url": "#",
-      "detailContent": "",
+      "detailContent": "L'Oréal Paris — Garnier Vitamin C Sorbet Cream Launch Campaign\nWorked as part of a Nordic team on the pan-Scandinavian launch campaign for Garnier's Vitamin C Sorbet Cream, with a particular focus on representing the Finnish market alongside my local team.\n\n- Managed community engagement across thousands of videos as part of the product launch, monitoring conversations around the product and brand\n- Responded to comments and messages in a way consistent with the brand voice and the image L'Oréal wanted to project\n- Tracked product performance and analysed which content formats and messages drove the strongest engagement, with a specific focus on the Finnish market\n- Compiled findings and reported insights directly to L'Oréal as part of the broader Nordic reporting structure\n- The campaign ran for an intensive five-week period, delivered strong results, and received excellent client feedback\n\nA demanding but rewarding project that built real experience in social listening, brand-aligned community management, and working within a multi-market team structure on a major international brand.",
       "media": [
         {
           "id": 1780982946121.995,
@@ -31,19 +28,17 @@ const DEFAULT_DATA = {
           "src": "Images/IMG_7690.jpg",
           "caption": ""
         }
-      ]
+      ],
+      "thumbnailId": 1780982946121.995
     },
     {
       "id": "2",
       "type": "Design",
-      "title": "Toinen projekti",
+      "title": "PR Packages",
       "description": "Lyhyt kuvaus projektista.",
-      "tags": [
-        "Figma",
-        "Branding"
-      ],
+      "tags": [],
       "url": "#",
-      "detailContent": "",
+      "detailContent": "Influencer PR Package Production\nDesigned and assembled PR packages for influencer seeding campaigns, balancing creative presentation with real budget constraints.\n\n- Sourced materials and packaging solutions to create visually compelling unboxing experiences\n- Made creative decisions around presentation, ensuring the packages felt on-brand and gift-worthy within the available budget\n\nA small but detail-oriented part of influencer marketing where the physical presentation is the first impression the brand makes.",
       "media": [
         {
           "id": 1780983400829.9963,
@@ -63,33 +58,68 @@ const DEFAULT_DATA = {
           "src": "Images/IMG_7693.jpg",
           "caption": ""
         }
-      ]
+      ],
+      "thumbnailId": 1780983437448.3713
     },
     {
       "id": "3",
-      "type": "Open Source",
-      "title": "Kolmas projekti",
+      "type": "fazer April fools",
+      "title": "Fazer is a Record Company",
       "description": "Lyhyt kuvaus projektista.",
-      "tags": [
-        "Python",
-        "CLI"
-      ],
+      "tags": [],
       "url": "#",
-      "detailContent": "",
+      "detailContent": "Fazer April Fools' Campaign — Production Assistant\nContributed to Fazer's spring 2026 April Fools' campaign, in which Fazer announced itself as Finland's largest record label, which was technically true.\n\n- Helped build chocolate vinyl display pieces for the PR event.- Assisted on-site at the PR event: directing guests, coordinating influencer arrivals, and distributing personalised PR packages.\n- Supported the team on set during the filming of KAJ's social media video tied to the campaign.\n- Handled various hands-on tasks throughout the day to keep the event running smoothly.\n\nA fun and memorable project to be part of and a good reminder that even in a supporting role, the details you handle on the ground matter to the whole.",
       "media": [
-        {
-          "id": 1780983515481.259,
-          "type": "video",
-          "src": "Images/Fazer Dumle Crispy Twins SOME 10sec 1920x1080.mp4",
-          "caption": ""
-        },
         {
           "id": 1780983543588.9485,
           "type": "image",
           "src": "Images/IMG_7050.jpg",
           "caption": ""
+        },
+        {
+          "id": 1781024862199.5293,
+          "type": "video",
+          "src": "Images/sininen klippi.mov",
+          "caption": ""
         }
-      ]
+      ],
+      "thumbnailId": null
+    },
+    {
+      "id": "1781024881792",
+      "type": "Commercial add",
+      "title": "Dumble Crispy Twins",
+      "description": "Kuvaus projektista.",
+      "tags": [],
+      "url": "#",
+      "media": [
+        {
+          "id": 1781024912729.4902,
+          "type": "video",
+          "src": "Images/Fazer Dumle Crispy Twins SOME 10sec 1920x1080.mp4",
+          "caption": ""
+        },
+        {
+          "id": 1781025142466.4114,
+          "type": "image",
+          "src": "Images/Näyttökuva 2026-06-08 kello 14.30.01.png",
+          "caption": ""
+        },
+        {
+          "id": 1781025723143.4053,
+          "type": "image",
+          "src": "Images/Näyttökuva 2026-06-08 kello 14.30.01 2.png",
+          "caption": ""
+        },
+        {
+          "id": 1781025772918.6748,
+          "type": "image",
+          "src": "Images/Näyttökuva 2026-06-08 kello 14.30.01.jpeg",
+          "caption": ""
+        }
+      ],
+      "detailContent": "Fazer Dumle Crispy Twins — Campaign Production Assistant\nSupported the full production of a multi-format advertising campaign for Fazer's Dumle Crispy Twins product launch.\n\n- Handled casting for the campaign, sourcing and selecting the on-screen talent.- Selected the voice-over artist and collaborated closely with them to align the delivery with the brand's tone and ensure correct pronunciation\n- Assisted in directing actors on set alongside the director of photography and a fellow coordinator\n- The campaign spanned multiple formats, as a TV commercial, outdoor digital displays, and social media video content produced for both Finnish and Swedish markets, requiring a solid understanding of how format and platform shape creative execution\n\nOverall, the project was a valuable exercise in end-to-end production thinking: what it takes to bring an advertising campaign to life and how many moving parts need to align to do it well",
+      "thumbnailId": 1781025142466.4114
     }
   ]
 };
