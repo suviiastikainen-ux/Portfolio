@@ -6,9 +6,9 @@
 const DEFAULT_DATA = {
   "hero": {
     "navLogo": "suvii.astikainen@gmail.com",
-    "name": "Eero Klen",
-    "title": "Designer & Developer",
-    "description": "Rakennan selkeitä digitaalisia tuotteita, joissa muoto ja toiminto kohtaavat.",
+    "name": "Suvi Astikainen",
+    "title": "",
+    "description": "",
     "footerCopyright": "© 2026 Suvi Astikainen",
     "footerSub": "Rakennettu käsin HTML, CSS & JS"
   },
@@ -17,7 +17,7 @@ const DEFAULT_DATA = {
       "id": "1",
       "type": "",
       "title": "L'Oréal Paris Campaign Launch",
-      "description": "Lyhyt kuvaus projektista. Mitä se tekee, miksi se on kiinnostava.",
+      "description": "",
       "tags": [],
       "url": "#",
       "detailContent": "L'Oréal Paris — Garnier Vitamin C Sorbet Cream Launch Campaign\nWorked as part of a Nordic team on the pan-Scandinavian launch campaign for Garnier's Vitamin C Sorbet Cream, with a particular focus on representing the Finnish market alongside my local team.\n\n- Managed community engagement across thousands of videos as part of the product launch, monitoring conversations around the product and brand\n- Responded to comments and messages in a way consistent with the brand voice and the image L'Oréal wanted to project\n- Tracked product performance and analysed which content formats and messages drove the strongest engagement, with a specific focus on the Finnish market\n- Compiled findings and reported insights directly to L'Oréal as part of the broader Nordic reporting structure\n- The campaign ran for an intensive five-week period, delivered strong results, and received excellent client feedback\n\nA demanding but rewarding project that built real experience in social listening, brand-aligned community management, and working within a multi-market team structure on a major international brand.",
@@ -33,9 +33,9 @@ const DEFAULT_DATA = {
     },
     {
       "id": "2",
-      "type": "Design",
+      "type": "",
       "title": "PR Packages",
-      "description": "Lyhyt kuvaus projektista.",
+      "description": "",
       "tags": [],
       "url": "#",
       "detailContent": "Influencer PR Package Production\nDesigned and assembled PR packages for influencer seeding campaigns, balancing creative presentation with real budget constraints.\n\n- Sourced materials and packaging solutions to create visually compelling unboxing experiences\n- Made creative decisions around presentation, ensuring the packages felt on-brand and gift-worthy within the available budget\n\nA small but detail-oriented part of influencer marketing where the physical presentation is the first impression the brand makes.",
@@ -65,7 +65,7 @@ const DEFAULT_DATA = {
       "id": "3",
       "type": "fazer April fools",
       "title": "Fazer is a Record Company",
-      "description": "Lyhyt kuvaus projektista.",
+      "description": "",
       "tags": [],
       "url": "#",
       "detailContent": "Fazer April Fools' Campaign — Production Assistant\nContributed to Fazer's spring 2026 April Fools' campaign, in which Fazer announced itself as Finland's largest record label, which was technically true.\n\n- Helped build chocolate vinyl display pieces for the PR event.- Assisted on-site at the PR event: directing guests, coordinating influencer arrivals, and distributing personalised PR packages.\n- Supported the team on set during the filming of KAJ's social media video tied to the campaign.\n- Handled various hands-on tasks throughout the day to keep the event running smoothly.\n\nA fun and memorable project to be part of and a good reminder that even in a supporting role, the details you handle on the ground matter to the whole.",
