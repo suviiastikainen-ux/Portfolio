@@ -89,7 +89,7 @@ const DEFAULT_DATA = {
       "id": "1781024881792",
       "type": "Commercial add",
       "title": "Dumble Crispy Twins",
-      "description": "Kuvaus projektista.",
+      "description": "",
       "tags": [],
       "url": "#",
       "media": [
@@ -98,10 +98,16 @@ const DEFAULT_DATA = {
           "type": "video",
           "src": "Images/Fazer Dumle Crispy Twins SOME 10sec 1920x1080.mp4",
           "caption": ""
+        },
+        {
+          "id": 1781073991493.697,
+          "type": "image",
+          "src": "Images/14.30.01.jpg",
+          "caption": ""
         }
       ],
       "detailContent": "Fazer Dumle Crispy Twins — Campaign Production Assistant\nSupported the full production of a multi-format advertising campaign for Fazer's Dumle Crispy Twins product launch.\n\n- Handled casting for the campaign, sourcing and selecting the on-screen talent.- Selected the voice-over artist and collaborated closely with them to align the delivery with the brand's tone and ensure correct pronunciation\n- Assisted in directing actors on set alongside the director of photography and a fellow coordinator\n- The campaign spanned multiple formats, as a TV commercial, outdoor digital displays, and social media video content produced for both Finnish and Swedish markets, requiring a solid understanding of how format and platform shape creative execution\n\nOverall, the project was a valuable exercise in end-to-end production thinking: what it takes to bring an advertising campaign to life and how many moving parts need to align to do it well",
-      "thumbnailId": null
+      "thumbnailId": 1781073991493.697
     }
   ]
 };
