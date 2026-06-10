@@ -20,7 +20,7 @@ const DEFAULT_DATA = {
       "description": "",
       "tags": [],
       "url": "#",
-      "detailContent": "L'Oréal Paris — Garnier Vitamin C Sorbet Cream Launch Campaign\nWorked as part of a Nordic team on the pan–Scandinavian launch campaign for Garnier's Vitamin C Sorbet Cream, with a particular focus on representing the Finnish market alongside my local team.\n\n– Managed community engagement across thousands of videos as part of the product launch, monitoring conversations around the product and brand\n– Responded to comments and messages in a way consistent with the brand voice and the image L'Oréal wanted to project\n– Tracked product performance and analysed which content formats and messages drove the strongest engagement, with a specific focus on the Finnish market\n– Compiled findings and reported insights directly to L'Oréal as part of the broader Nordic reporting structure\n– The campaign ran for an intensive five–week period, delivered strong results, and received excellent client feedback\n\nA demanding but rewarding project that built real experience in social listening, brand–aligned community management, and working within a multi–market team structure on a major international brand.",
+      "detailContent": "L'Oréal Paris — Garnier Vitamin C Sorbet Cream Launch Campaign\nWorked as part of a Nordic team on the pan-Scandinavian launch campaign for Garnier's Vitamin C Sorbet Cream, with a particular focus on representing the Finnish market alongside my local team.\n\n- Managed community engagement across thousands of videos as part of the product launch, monitoring conversations around the product and brand\n- Responded to comments and messages in a way consistent with the brand voice and the image L'Oréal wanted to project\n- Tracked product performance and analysed which content formats and messages drove the strongest engagement, with a specific focus on the Finnish market\n- Compiled findings and reported insights directly to L'Oréal as part of the broader Nordic reporting structure\n- The campaign ran for an intensive five-week period, delivered strong results, and received excellent client feedback\n\nA demanding but rewarding project that built real experience in social listening, brand-aligned community management, and working within a multi-market team structure on a major international brand.",
       "media": [
         {
           "id": 1780982946121.995,
@@ -38,7 +38,7 @@ const DEFAULT_DATA = {
       "description": "",
       "tags": [],
       "url": "#",
-      "detailContent": "Influencer PR Package Production\nDesigned and assembled PR packages for influencer seeding campaigns, balancing creative presentation with real budget constraints.\n\n– Sourced materials and packaging solutions to create visually compelling unboxing experiences\n– Made creative decisions around presentation, ensuring the packages felt on–brand and gift–worthy within the available budget\n\nA small but detail–oriented part of influencer marketing where the physical presentation is the first impression the brand makes.",
+      "detailContent": "Influencer PR Package Production\nDesigned and assembled PR packages for influencer seeding campaigns, balancing creative presentation with real budget constraints.\n\n- Sourced materials and packaging solutions to create visually compelling unboxing experiences\n- Made creative decisions around presentation, ensuring the packages felt on-brand and gift-worthy within the available budget\n\nA small but detail-oriented part of influencer marketing where the physical presentation is the first impression the brand makes.",
       "media": [
         {
           "id": 1780983400829.9963,
@@ -68,7 +68,7 @@ const DEFAULT_DATA = {
       "description": "",
       "tags": [],
       "url": "#",
-      "detailContent": "Fazer April Fools' Campaign — Production Assistant\nContributed to Fazer's spring 2026 April Fools' campaign, in which Fazer announced itself as Finland's largest record label, which was technically true.\n\n– Helped build chocolate vinyl display pieces for the PR event.\n– Assisted on–site at the PR event: directing guests, coordinating influencer arrivals, and distributing personalised PR packages.\n– Supported the team on set during the filming of KAJ's social media video tied to the campaign.\n– Handled various hands–on tasks throughout the day to keep the event running smoothly.\n\nA fun and memorable project to be part of and a good reminder that even in a supporting role, the details you handle on the ground matter to the whole.",
+      "detailContent": "Fazer April Fools' Campaign — Production Assistant\nContributed to Fazer's spring 2026 April Fools' campaign, in which Fazer announced itself as Finland's largest record label, which was technically true.\n\n- Helped build chocolate vinyl display pieces for the PR event.\n- Assisted on-site at the PR event: directing guests, coordinating influencer arrivals, and distributing personalised PR packages.\n- Supported the team on set during the filming of KAJ's social media video tied to the campaign.\n- Handled various hands-on tasks throughout the day to keep the event running smoothly.\n\nA fun and memorable project to be part of and a good reminder that even in a supporting role, the details you handle on the ground matter to the whole.",
       "media": [
         {
           "id": 1780983543588.9485,
@@ -106,7 +106,7 @@ const DEFAULT_DATA = {
           "caption": ""
         }
       ],
-      "detailContent": "Fazer Dumle Crispy Twins — Campaign Production Assistant\nSupported the full production of a multi–format advertising campaign for Fazer's Dumle Crispy Twins product launch.\n\n– Handled casting for the campaign, sourcing and selecting the on–screen talent.– Selected the voice–over artist and collaborated closely with them to align the delivery with the brand's tone and ensure correct pronunciation\n– Assisted in directing actors on set alongside the director of photography and a fellow coordinator\n– The campaign spanned multiple formats, as a TV commercial, outdoor digital displays, and social media video content produced for both Finnish and Swedish markets, requiring a solid understanding of how format and platform shape creative execution\n\nOverall, the project was a valuable exercise in end–to–end production thinking: what it takes to bring an advertising campaign to life and how many moving parts need to align to do it well",
+      "detailContent": "Fazer Dumle Crispy Twins — Campaign Production Assistant\nSupported the full production of a multi-format advertising campaign for Fazer's Dumle Crispy Twins product launch.\n\n- Handled casting for the campaign, sourcing and selecting the on-screen talent.- Selected the voice-over artist and collaborated closely with them to align the delivery with the brand's tone and ensure correct pronunciation\n- Assisted in directing actors on set alongside the director of photography and a fellow coordinator\n- The campaign spanned multiple formats, as a TV commercial, outdoor digital displays, and social media video content produced for both Finnish and Swedish markets, requiring a solid understanding of how format and platform shape creative execution\n\nOverall, the project was a valuable exercise in end-to-end production thinking: what it takes to bring an advertising campaign to life and how many moving parts need to align to do it well",
       "thumbnailId": 1781073991493.697
     }
   ]
@@ -147,7 +147,7 @@ async function exportScript() {
   exportData.projects.forEach(p => {
     (p.media || []).forEach(m => {
       if (m.type === 'image' && m.src.startsWith('data:')) {
-        const filename = m.filename || `image–${m.id}.jpg`;
+        const filename = m.filename || `image-${m.id}.jpg`;
         imageFiles.push({ filename, dataUrl: m.src });
         m.src = `Images/${filename}`;
       }
@@ -265,31 +265,31 @@ function applyCardCover(card, project) {
   const src = getProjectCoverSrc(project);
   if (!src) {
     card.style.backgroundImage = '';
-    card.classList.remove('has–cover');
+    card.classList.remove('has-cover');
     return;
   }
   const set = () => {
     card.style.backgroundImage = `url("${src.replace(/"/g, '%22')}")`;
-    card.classList.add('has–cover');
+    card.classList.add('has-cover');
   };
   if (src.startsWith('data:')) {
     set();
   } else {
     const img = new Image();
     img.onload = set;
-    img.onerror = () => { card.style.backgroundImage = ''; card.classList.remove('has–cover'); };
+    img.onerror = () => { card.style.backgroundImage = ''; card.classList.remove('has-cover'); };
     img.src = src;
   }
 }
 
 function updateCardCover(project) {
-  const card = document.querySelector(`#workGrid .work–card[data–id="${CSS.escape(project.id)}"]`);
+  const card = document.querySelector(`#workGrid .work-card[data-id="${CSS.escape(project.id)}"]`);
   if (card) applyCardCover(card, project);
 }
 
 function syncGridLayout() {
   const grid = document.getElementById('workGrid');
-  grid.dataset.count = grid.querySelectorAll('.work–card').length;
+  grid.dataset.count = grid.querySelectorAll('.work-card').length;
 }
 
 // ============================================================
@@ -297,7 +297,7 @@ function syncGridLayout() {
 // ============================================================
 
 function renderPage() {
-  document.querySelectorAll('[data–e]').forEach(el => {
+  document.querySelectorAll('[data-e]').forEach(el => {
     const val = data.hero[el.dataset.e];
     if (val !== undefined) el.textContent = val;
   });
@@ -309,56 +309,56 @@ function renderPage() {
 
 function createCard(project) {
   const article = document.createElement('article');
-  article.className = 'work–card';
+  article.className = 'work-card';
   article.dataset.id = project.id;
 
   const tagsHTML = project.tags.map(t => `
-    <div class="tag–wrap">
-      <span class="tag tag–sm">${esc(t)}</span>
-      <button class="remove–tag" type="button" aria–label="Poista tagi">×</button>
+    <div class="tag-wrap">
+      <span class="tag tag-sm">${esc(t)}</span>
+      <button class="remove-tag" type="button" aria-label="Poista tagi">×</button>
     </div>`).join('');
 
   article.innerHTML = `
-    <div class="work–card–header">
-      <span class="work–type" data–field="type">${esc(project.type)}</span>
-      <div class="card–controls">
-        <input class="url–input" type="url" value="${esc(project.url)}" placeholder="https://…">
-        <button class="delete–card" type="button" aria–label="Poista projekti">×</button>
+    <div class="work-card-header">
+      <span class="work-type" data-field="type">${esc(project.type)}</span>
+      <div class="card-controls">
+        <input class="url-input" type="url" value="${esc(project.url)}" placeholder="https://…">
+        <button class="delete-card" type="button" aria-label="Poista projekti">×</button>
       </div>
-      <a href="${esc(project.url) || '#'}" class="work–link" target="_blank" rel="noopener" aria–label="Avaa projekti">↗</a>
+      <a href="${esc(project.url) || '#'}" class="work-link" target="_blank" rel="noopener" aria-label="Avaa projekti">↗</a>
     </div>
-    <h3 class="work–title" data–field="title">${esc(project.title)}</h3>
-    <p class="work–description" data–field="description">${esc(project.description)}</p>
-    <div class="work–tags">${tagsHTML}<button class="add–tag" type="button">+</button></div>
+    <h3 class="work-title" data-field="title">${esc(project.title)}</h3>
+    <p class="work-description" data-field="description">${esc(project.description)}</p>
+    <div class="work-tags">${tagsHTML}<button class="add-tag" type="button">+</button></div>
   `;
 
   applyCardCover(article, project);
 
-  // Open detail (non–edit mode only)
+  // Open detail (non-edit mode only)
   article.addEventListener('click', e => {
     if (editMode) return;
-    if (e.target.closest('.work–link')) return;
+    if (e.target.closest('.work-link')) return;
     openProject(project.id);
   });
 
-  article.querySelector('.url–input').addEventListener('input', function () {
-    article.querySelector('.work–link').href = this.value || '#';
+  article.querySelector('.url-input').addEventListener('input', function () {
+    article.querySelector('.work-link').href = this.value || '#';
   });
 
-  article.querySelector('.delete–card').addEventListener('click', () => {
+  article.querySelector('.delete-card').addEventListener('click', () => {
     if (confirm('Poistetaanko projekti?')) { article.remove(); syncGridLayout(); }
   });
 
-  article.querySelectorAll('.remove–tag').forEach(btn => {
-    btn.addEventListener('click', () => btn.closest('.tag–wrap').remove());
+  article.querySelectorAll('.remove-tag').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.tag-wrap').remove());
   });
 
-  article.querySelector('.add–tag').addEventListener('click', () => {
+  article.querySelector('.add-tag').addEventListener('click', () => {
     const wrap = document.createElement('div');
-    wrap.className = 'tag–wrap';
-    wrap.innerHTML = `<span class="tag tag–sm" contenteditable="true">Uusi</span><button class="remove–tag" type="button">×</button>`;
-    wrap.querySelector('.remove–tag').addEventListener('click', () => wrap.remove());
-    article.querySelector('.add–tag').before(wrap);
+    wrap.className = 'tag-wrap';
+    wrap.innerHTML = `<span class="tag tag-sm" contenteditable="true">Uusi</span><button class="remove-tag" type="button">×</button>`;
+    wrap.querySelector('.remove-tag').addEventListener('click', () => wrap.remove());
+    article.querySelector('.add-tag').before(wrap);
     const tag = wrap.querySelector('.tag');
     tag.focus(); selectAll(tag);
   });
@@ -383,7 +383,7 @@ function openProject(id) {
   const dv = document.getElementById('detailView');
   dv.scrollTop = 0;
   dv.classList.add('open');
-  document.body.classList.add('detail–open');
+  document.body.classList.add('detail-open');
   document.documentElement.style.overflow = 'hidden';
   history.pushState({ projectId: id }, '', `#project/${id}`);
 }
@@ -395,7 +395,7 @@ function closeProject() {
   currentProject = null;
 
   document.getElementById('detailView').classList.remove('open');
-  document.body.classList.remove('detail–open');
+  document.body.classList.remove('detail-open');
   document.documentElement.style.overflow = '';
   history.pushState(null, '', window.location.pathname + window.location.search);
 }
@@ -430,31 +430,31 @@ function renderDetail(project) {
 function renderDetailTags(tags) {
   const el = document.getElementById('detailTags');
   el.innerHTML = tags.map(t => `
-    <div class="tag–wrap">
-      <span class="tag tag–sm">${esc(t)}</span>
-      <button class="remove–tag" type="button">×</button>
+    <div class="tag-wrap">
+      <span class="tag tag-sm">${esc(t)}</span>
+      <button class="remove-tag" type="button">×</button>
     </div>`).join('') +
-    '<button class="add–tag" type="button" aria–label="Lisää tagi">+</button>';
+    '<button class="add-tag" type="button" aria-label="Lisää tagi">+</button>';
 
-  el.querySelectorAll('.remove–tag').forEach(btn => {
-    btn.addEventListener('click', () => btn.closest('.tag–wrap').remove());
+  el.querySelectorAll('.remove-tag').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.tag-wrap').remove());
   });
 
-  el.querySelector('.add–tag').addEventListener('click', () => {
+  el.querySelector('.add-tag').addEventListener('click', () => {
     const wrap = document.createElement('div');
-    wrap.className = 'tag–wrap';
+    wrap.className = 'tag-wrap';
     const ce = editMode ? ' contenteditable="true"' : '';
-    wrap.innerHTML = `<span class="tag tag–sm"${ce}>Uusi</span><button class="remove–tag" type="button">×</button>`;
-    wrap.querySelector('.remove–tag').addEventListener('click', () => wrap.remove());
-    el.querySelector('.add–tag').before(wrap);
+    wrap.innerHTML = `<span class="tag tag-sm"${ce}>Uusi</span><button class="remove-tag" type="button">×</button>`;
+    wrap.querySelector('.remove-tag').addEventListener('click', () => wrap.remove());
+    el.querySelector('.add-tag').before(wrap);
     const tag = wrap.querySelector('.tag');
     tag.focus(); selectAll(tag);
   });
 }
 
 function syncPlaceholder(el) {
-  if (el.textContent.trim() === '') el.classList.add('is–empty');
-  else el.classList.remove('is–empty');
+  if (el.textContent.trim() === '') el.classList.add('is-empty');
+  else el.classList.remove('is-empty');
 }
 
 // ============================================================
@@ -470,43 +470,43 @@ function renderMedia(mediaItems) {
 
 function refreshThumbnailButtons() {
   if (!currentProject) return;
-  document.querySelectorAll('#detailMedia .media–item').forEach(div => {
+  document.querySelectorAll('#detailMedia .media-item').forEach(div => {
     const id = Number(div.dataset.mediaId);
-    const btn = div.querySelector('.set–thumbnail–btn');
+    const btn = div.querySelector('.set-thumbnail-btn');
     if (!btn) return;
     const isActive = currentProject.thumbnailId === id ||
       (!currentProject.thumbnailId && currentProject.media && currentProject.media.length > 0 && currentProject.media.find(m => m.type === 'image') && currentProject.media.find(m => m.type === 'image').id === id);
-    btn.classList.toggle('is–thumbnail', isActive);
+    btn.classList.toggle('is-thumbnail', isActive);
     btn.textContent = isActive ? '★ Thumbnail' : '☆ Aseta thumbnail';
   });
 }
 
 function createMediaItem(item) {
   const div = document.createElement('div');
-  div.className = 'media–item' + (item.type === 'embed' ? ' is–embed' : '');
+  div.className = 'media-item' + (item.type === 'embed' ? ' is-embed' : '');
   div.dataset.mediaId = item.id;
 
   let mediaHTML;
   if (item.type === 'embed') {
-    mediaHTML = `<div class="embed–wrap"><iframe src="${esc(item.src)}" allowfullscreen allow="accelerometer; autoplay; clipboard–write; encrypted–media; gyroscope; picture–in–picture"></iframe></div>`;
+    mediaHTML = `<div class="embed-wrap"><iframe src="${esc(item.src)}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>`;
   } else if (item.type === 'video') {
-    mediaHTML = `<div class="embed–wrap"><video src="${esc(item.src)}" controls preload="metadata"></video></div>`;
+    mediaHTML = `<div class="embed-wrap"><video src="${esc(item.src)}" controls preload="metadata"></video></div>`;
   } else {
     mediaHTML = `<img src="${esc(item.src)}" alt="${esc(item.caption || '')}" loading="lazy">`;
   }
 
   div.innerHTML = `
     ${mediaHTML}
-    <div class="media–footer">
-      <p class="media–caption">${esc(item.caption || '')}</p>
-      <div class="media–actions">
-        ${item.type === 'image' ? `<button class="set–thumbnail–btn" type="button">☆ Aseta thumbnail</button>` : ''}
-        <button class="media–delete" type="button" aria–label="Poista">×</button>
+    <div class="media-footer">
+      <p class="media-caption">${esc(item.caption || '')}</p>
+      <div class="media-actions">
+        ${item.type === 'image' ? `<button class="set-thumbnail-btn" type="button">☆ Aseta thumbnail</button>` : ''}
+        <button class="media-delete" type="button" aria-label="Poista">×</button>
       </div>
     </div>`;
 
   // Thumbnail selection
-  const thumbBtn = div.querySelector('.set–thumbnail–btn');
+  const thumbBtn = div.querySelector('.set-thumbnail-btn');
   if (thumbBtn) {
     thumbBtn.addEventListener('click', () => {
       if (!currentProject) return;
@@ -517,20 +517,20 @@ function createMediaItem(item) {
     });
   }
 
-  // Live–save caption to data
-  const captionEl = div.querySelector('.media–caption');
+  // Live-save caption to data
+  const captionEl = div.querySelector('.media-caption');
   captionEl.addEventListener('input', () => {
     item.caption = captionEl.textContent.trim();
     const img = div.querySelector('img');
     if (img) img.alt = item.caption;
   });
 
-  div.querySelector('.media–delete').addEventListener('click', () => {
+  div.querySelector('.media-delete').addEventListener('click', () => {
     if (!currentProject) return;
     currentProject.media = currentProject.media.filter(m => m.id !== item.id);
     renderMedia(currentProject.media);
     if (editMode) {
-      document.querySelectorAll('#detailMedia .media–caption').forEach(c => {
+      document.querySelectorAll('#detailMedia .media-caption').forEach(c => {
         c.contentEditable = 'true';
       });
     }
@@ -557,7 +557,7 @@ function addUrlToMedia(url) {
   currentProject.media.push(item);
   const el = createMediaItem(item);
   document.getElementById('detailMedia').appendChild(el);
-  if (editMode) el.querySelector('.media–caption').contentEditable = 'true';
+  if (editMode) el.querySelector('.media-caption').contentEditable = 'true';
   if (type === 'image') updateCardCover(currentProject);
   document.getElementById('mediaUrlInput').value = '';
 }
@@ -575,15 +575,15 @@ function initUploadZone() {
 let editMode = false;
 
 const SINGLELINE = [
-  '[data–e="navLogo"]', '[data–e="name"]', '[data–e="title"]',
-  '[data–e="footerCopyright"]', '[data–e="footerSub"]',
-  '[data–field="type"]', '[data–field="title"]',
-  '#detailTitle', '#detailType', '.tag.tag–sm'
+  '[data-e="navLogo"]', '[data-e="name"]', '[data-e="title"]',
+  '[data-e="footerCopyright"]', '[data-e="footerSub"]',
+  '[data-field="type"]', '[data-field="title"]',
+  '#detailTitle', '#detailType', '.tag.tag-sm'
 ];
 
 function enterEditMode() {
   editMode = true;
-  document.body.classList.add('edit–mode');
+  document.body.classList.add('edit-mode');
   document.getElementById('editToggle').textContent = 'Valmis ✓';
   if (currentView === 'main') enableMainEditing();
   else enableDetailEditing();
@@ -594,38 +594,38 @@ function exitEditMode() {
   if (currentView === 'main') { disableMainEditing(); saveMainEdits(); }
   else { disableDetailEditing(); saveDetailEdits(); }
   editMode = false;
-  document.body.classList.remove('edit–mode');
+  document.body.classList.remove('edit-mode');
 }
 
 function enableMainEditing() {
-  document.querySelectorAll('[data–e]').forEach(el => el.contentEditable = 'true');
-  document.querySelectorAll('.work–card [data–field]').forEach(el => el.contentEditable = 'true');
-  document.querySelectorAll('.work–card .tag.tag–sm').forEach(el => el.contentEditable = 'true');
+  document.querySelectorAll('[data-e]').forEach(el => el.contentEditable = 'true');
+  document.querySelectorAll('.work-card [data-field]').forEach(el => el.contentEditable = 'true');
+  document.querySelectorAll('.work-card .tag.tag-sm').forEach(el => el.contentEditable = 'true');
 }
 
 function disableMainEditing() {
   document.querySelectorAll('[contenteditable="true"]').forEach(el => el.contentEditable = 'false');
-  document.querySelectorAll('.work–card').forEach(card => {
-    card.querySelector('.work–link').href = card.querySelector('.url–input').value || '#';
+  document.querySelectorAll('.work-card').forEach(card => {
+    card.querySelector('.work-link').href = card.querySelector('.url-input').value || '#';
   });
 }
 
 function saveMainEdits() {
-  document.querySelectorAll('[data–e]').forEach(el => {
+  document.querySelectorAll('[data-e]').forEach(el => {
     data.hero[el.dataset.e] = el.textContent.trim();
   });
   const newProjects = [];
-  document.querySelectorAll('#workGrid .work–card').forEach(card => {
+  document.querySelectorAll('#workGrid .work-card').forEach(card => {
     const id = card.dataset.id;
     const existing = data.projects.find(p => p.id === id) || {};
-    const tags = [...card.querySelectorAll('.tag–wrap .tag.tag–sm')]
+    const tags = [...card.querySelectorAll('.tag-wrap .tag.tag-sm')]
       .map(t => t.textContent.trim()).filter(Boolean);
     newProjects.push({
       ...existing, id,
-      type: card.querySelector('[data–field="type"]').textContent.trim(),
-      title: card.querySelector('[data–field="title"]').textContent.trim(),
-      description: card.querySelector('[data–field="description"]').textContent.trim(),
-      tags, url: card.querySelector('.url–input').value.trim()
+      type: card.querySelector('[data-field="type"]').textContent.trim(),
+      title: card.querySelector('[data-field="title"]').textContent.trim(),
+      description: card.querySelector('[data-field="description"]').textContent.trim(),
+      tags, url: card.querySelector('.url-input').value.trim()
     });
   });
   data.projects = newProjects;
@@ -637,8 +637,8 @@ function enableDetailEditing() {
     const el = document.getElementById(id);
     if (el) el.contentEditable = 'true';
   });
-  document.querySelectorAll('#detailTags .tag.tag–sm').forEach(el => el.contentEditable = 'true');
-  document.querySelectorAll('#detailMedia .media–caption').forEach(el => el.contentEditable = 'true');
+  document.querySelectorAll('#detailTags .tag.tag-sm').forEach(el => el.contentEditable = 'true');
+  document.querySelectorAll('#detailMedia .media-caption').forEach(el => el.contentEditable = 'true');
   refreshThumbnailButtons();
 }
 
@@ -654,7 +654,7 @@ function saveDetailEdits() {
 
   currentProject.type = document.getElementById('detailType').textContent.trim();
   currentProject.title = document.getElementById('detailTitle').textContent.trim();
-  currentProject.tags = [...document.querySelectorAll('#detailTags .tag–wrap .tag.tag–sm')]
+  currentProject.tags = [...document.querySelectorAll('#detailTags .tag-wrap .tag.tag-sm')]
     .map(t => t.textContent.trim()).filter(Boolean);
   currentProject.detailContent = getEditableText(document.getElementById('detailContent'));
 
@@ -664,7 +664,7 @@ function saveDetailEdits() {
 
   // Sync project into data.projects (it's already a reference, but replace to be safe)
   const idx = data.projects.findIndex(p => p.id === currentProject.id);
-  if (idx !== –1) data.projects[idx] = currentProject;
+  if (idx !== -1) data.projects[idx] = currentProject;
 
   persistToStorage();
   renderPage(); // Update card in background
@@ -691,14 +691,14 @@ document.getElementById('addProject').addEventListener('click', () => {
   const card = createCard(p);
   document.getElementById('workGrid').appendChild(card);
   syncGridLayout();
-  card.querySelectorAll('[data–field]').forEach(el => el.contentEditable = 'true');
-  card.querySelectorAll('.tag.tag–sm').forEach(el => el.contentEditable = 'true');
-  const title = card.querySelector('[data–field="title"]');
+  card.querySelectorAll('[data-field]').forEach(el => el.contentEditable = 'true');
+  card.querySelectorAll('.tag.tag-sm').forEach(el => el.contentEditable = 'true');
+  const title = card.querySelector('[data-field="title"]');
   title.focus(); selectAll(title);
   card.scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
 
-// Prevent newlines in single–line fields
+// Prevent newlines in single-line fields
 document.addEventListener('keydown', e => {
   if (e.key === 'Enter' && e.target.isContentEditable) {
     if (SINGLELINE.some(sel => e.target.matches(sel))) {
@@ -721,7 +721,7 @@ window.addEventListener('popstate', () => {
     currentView = 'main';
     currentProject = null;
     document.getElementById('detailView').classList.remove('open');
-    document.body.classList.remove('detail–open');
+    document.body.classList.remove('detail-open');
     document.documentElement.style.overflow = '';
   }
 });
@@ -769,14 +769,14 @@ window.addEventListener('popstate', () => {
   }
 
   function unlock() {
-    document.body.classList.add('admin–unlocked');
+    document.body.classList.add('admin-unlocked');
     sessionStorage.setItem('adminUnlocked', '1');
     showToast('Muokkaustila avattu — paina "Muokkaa" aloittaaksesi.');
   }
 
   // Palauta istunnon kirjautuminen
   if (sessionStorage.getItem('adminUnlocked')) {
-    document.body.classList.add('admin–unlocked');
+    document.body.classList.add('admin-unlocked');
   }
 })();
 
@@ -785,17 +785,17 @@ window.addEventListener('popstate', () => {
 // ============================================================
 
 const themeToggle = document.getElementById('themeToggle');
-const themeIcon = themeToggle.querySelector('.theme–icon');
+const themeIcon = themeToggle.querySelector('.theme-icon');
 const savedTheme = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers–color–scheme: dark)').matches;
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
 
 themeToggle.addEventListener('click', () => {
-  applyTheme(document.documentElement.getAttribute('data–theme') === 'dark' ? 'light' : 'dark');
+  applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
 });
 
 function applyTheme(theme) {
-  document.documentElement.setAttribute('data–theme', theme);
+  document.documentElement.setAttribute('data-theme', theme);
   themeIcon.textContent = theme === 'dark' ? '○' : '◐';
   localStorage.setItem('theme', theme);
 }
