@@ -68,7 +68,7 @@ const DEFAULT_DATA = {
       "description": "",
       "tags": [],
       "url": "#",
-      "detailContent": "Fazer April Fools' Campaign — Production Assistant\nContributed to Fazer's spring 2026 April Fools' campaign, in which Fazer announced itself as Finland's largest record label, which was technically true.\n\n- Helped build chocolate vinyl display pieces for the PR event.\n- Assisted on-site at the PR event: directing guests, coordinating influencer arrivals, and distributing personalised PR packages.\n- Supported the team on set during the filming of KAJ's social media video tied to the campaign.\n- Handled various hands-on tasks throughout the day to keep the event running smoothly.\n\nA fun and memorable project to be part of and a good reminder that even in a supporting role, the details you handle on the ground matter to the whole.",
+      "detailContent": "Fazer April Fools' Campaign — Production Assistant\nContributed to Fazer's spring 2026 April Fools' campaign, in which Fazer announced itself as Finland's largest record label, which was technically true.\n\n– Helped build chocolate vinyl display pieces for the PR event.\n– Assisted on-site at the PR event: directing guests, coordinating influencer arrivals, and distributing personalised PR packages.\n– Supported the team on set during the filming of KAJ's social media video tied to the campaign.\n- Handled various hands-on tasks throughout the day to keep the event running smoothly.\n\nA fun and memorable project to be part of and a good reminder that even in a supporting role, the details you handle on the ground matter to the whole.",
       "media": [
         {
           "id": 1780983543588.9485,
